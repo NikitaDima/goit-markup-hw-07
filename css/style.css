@@ -430,7 +430,7 @@ img {
 
 /* Додавання соц.мереж */
 
-.soc-list {
+.soc__list {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -440,7 +440,7 @@ img {
     margin-bottom: 30px;
 }
 
-.soc-link {
+.soc__link {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -456,8 +456,8 @@ img {
     transition-delay: 0;
 }
 
-.soc-link:hover,
-.soc-link:focus {
+.soc__link:hover,
+.soc__link:focus {
     background-color: var(--icon-accent-color);
     outline: none;
     fill: var(--icon-bcg-color);
@@ -465,7 +465,11 @@ img {
 
 /* Секція постійні клієнти */
 
-.title-clients {
+.clients__section {
+    padding: var(--section-content) 0;
+}
+
+.clients__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1666em;
@@ -474,7 +478,7 @@ img {
     margin-bottom: 50px;
 }
 
-.list-clients {
+.clients__list {
     margin: 0;
     padding: 0;
     display: flex;
@@ -483,7 +487,7 @@ img {
     gap: 30px;
 }
 
-.link-clients {
+.clients__link {
     width: 170px;   
     height: 92px;
     display: flex;
@@ -500,8 +504,8 @@ img {
     transition-delay: 0;
 }
 
-.link-clients:hover,
-.link-clients:focus
+.clients__link:hover,
+.clients__link:focus
  {
     fill: var(--icon-accent-color);
     outline: none;
@@ -629,38 +633,23 @@ img {
 }
 
 /* Стіль футера */
-.footer-section {
+.footer__section {
     background: #2F303A;
     padding: 60px 0;
 }
 
-.box-footer {
+.footer__conteiner {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 93px;    
 }
 
-/* .tumb-footer {
-    display: flex;
-    align-items: baseline;
-    gap: 93px;
-} */
-
-/* .box-footer > .box-footer-logo {
-    margin-right: 70px;
-}
-
-.box-footer > .box-footer-social {
-    margin-right: 93px;
-} */
-
-
-.conteiner-footer {
+.footer__box {
     margin-bottom: 20px;
 }
 
-.logo-footer {
+.footer__logo {
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -669,28 +658,17 @@ img {
     color: var(--title-text-color)
 }
 
-.footer-desc {
+.footer__desc {
     color: var(--accent-color);
 }
 
-.list-footer {
-    margin: 0;
-    padding: 0;
-}
 
-
-.item-footer:not(:last-child) {
+.footer__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.item-footer > .map-link {
-    font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-}
 
-.address-link {
+.footer__link {
     font-style: normal;
     font-size: 14px;
     line-height: 1.714;
@@ -698,14 +676,19 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.address-link:hover,
-.address-link:focus {
+.footer__link--color {
+
+    color: var(--title-text-color);
+}
+
+.footer__link:hover,
+.footer__link:focus {
     color: var(--accent-color)
 }
 
 /* Соцільні мережі футера */
 
-.footer-title {
+.footer__title {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -716,43 +699,21 @@ img {
     
 }
 
-.social-list {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.social-link {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+.social__link--color {
     background: rgba(255, 255, 255, 0.1);
     fill: var(--icon-soc-footer);
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
-    
 }
 
-.social-link:hover, 
-.social-link:focus
+.social__link--color:hover, 
+.social__link--color:focus
 {
     background-color: var(--icon-accent-color);
 }
 
 /* Форма футера */
 
-/* .box-form {
-    margin-right: 0;
-} */
-
-.tumb-form {
+.footer__form {
     display: flex;
     align-items: center;
     margin: 0;
@@ -760,7 +721,7 @@ img {
     gap: 12px;
 }
 
-.input-footer {
+.footer__input {
     padding: 14px 16px;
     width: 358px;
     background-color: var(--bcg-footer);
@@ -773,7 +734,7 @@ img {
 }
 
 
-.btn-form-footer {
+.footer__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -795,11 +756,11 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-form-footer:hover {
+.footer__button:hover {
     background-color: #188CE8;
 }
 
-.icon-form-footer {
+.footer__icon {
     margin-left: 10px;
     fill: #ffffff;
 }
@@ -813,10 +774,11 @@ img {
     width: 100%;
     height: 100%;
     z-index: 1;
+    opacity: 1;
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition-property: transform, opacity, visibility;
-    transition-duration: 500ms;
+    transition-property: opacity;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 
@@ -824,19 +786,20 @@ img {
 
 .backdrop.is-hidden {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
-    transform: scale(1.2);
-
+    
 }
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+    }
 
 
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    
+        
     width: 528px;
     min-height: 581px;
     background-color: var(--bcg-modal);
@@ -845,9 +808,12 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.modal-button {
+.modal__button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -868,13 +834,13 @@ img {
     
 }
 
-.modal-button:hover {
+.modal__button:hover {
     fill: var(--icon-accent-color);
 }
 
 /* Стилі форм модельного вікна */
 
-.title-form {
+.modal__title {
     margin-top: 40px;
     margin-bottom: 12px;
 
@@ -987,6 +953,8 @@ img {
     letter-spacing: 0.03em;
     color: var(--desc-text-color);
     cursor: pointer;
+
+    user-select: none;
 }
 
 .label-checkbox::before {
