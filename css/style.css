@@ -196,7 +196,7 @@ img {
 }
 
 /* Стилізація контактів  */
-.header__contacts {
+.header__list {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -209,7 +209,7 @@ img {
     letter-spacing: 0.02em;
 }
 /* Стилізація посилань контактів */
-.header__connection {
+.header__contacts {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -231,16 +231,16 @@ img {
 }
 
 
-.header__connection:hover, 
+.header__contacts:hover, 
 .link:focus{
     color: var(--accent-color);
 }
 
-.header__connection:hover .header__icon {
+.header__contacts:hover .header__icon {
     fill: var(--icon-accent-color);
 }
 
-.header__connection:focus .header__icon {
+.header__contacts:focus .header__icon {
     fill: var(--icon-accent-color);
 }
 
