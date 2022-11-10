@@ -1,8 +1,21 @@
 @import './utils/variables';
 @import './utils/base';
+@import './components/social-link';
+@import './components/visually-hidden';
 
 @import './components/conteiner';
-@import './components/visually-hidden';
-@import './components/social-link';
 @import './components/header';
 @import './components/hero';
+@import './components/benefits';
+@import './components/working';
+@import './components/team';
+@import './components/clients';
+@import './components/portfolio';
+@import './components/card';
+@import './components/footer';
+@import './components/address';
+@import './components/footer-social';
+@import './components/team-social';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/form-modal'
