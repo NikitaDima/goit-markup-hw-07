@@ -36,10 +36,7 @@
     &__link {
         color: var(--primary-text-color);
     
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-delay: 0;
+        @include transition(color)
     }
     &__link:hover,
     &__link:focus {
@@ -81,24 +78,18 @@
         color: var(--desc-text-color);
         fill: var(--desc-text-color);
     
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-delay: 0;
+        @include transition(color)
     }
     &__contacts:hover,
     &__contacts:focus {
         color: var(--accent-color);
     }
     &__icon {
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-delay: 0;
+        @include transition(fill)
     }
     &__contacts:hover,
     &__contacts:focus {
-        & .header__icon {
+        .header__icon {
             fill: var(--icon-accent-color);
         }
     }
